@@ -20,7 +20,7 @@ jobs:
       # needs the libcurl library
       - run: sudo apt-get install libcurl4-openssl-dev
       - run: |
-          source("question1.R")
+          source("script.R")
         shell: Rscript {0}
           
 
