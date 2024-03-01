@@ -3,8 +3,8 @@ name: Name of Workflow
 on: 
   push:
   schedule:
-    # 11th minute of the 1st hour on a Monday
-    - cron: '11 0 * * 1'
+    # At 22:00 on every day-of-week from Monday through Friday.
+    - cron: '0 22 * * 1-5'
 
 permissions: write-all
 
@@ -20,7 +20,7 @@ jobs:
       # needs the libcurl library
       - run: sudo apt-get install libcurl4-openssl-dev
       - run: |
-          source("script.R")
+          source("question1.R")
         shell: Rscript {0}
           
 
